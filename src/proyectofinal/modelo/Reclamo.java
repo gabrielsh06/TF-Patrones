@@ -1,33 +1,35 @@
 package proyectofinal.modelo;
 
 public class Reclamo {
-    private String idArea;
+    private String idReclamo;
     private String fechaRegistro;
     private String tipo;
     private String descripcion;
     private String estado;
     private String canalIngreso;
     private int dniCliente;
+    private String idArea;
 
     public Reclamo() {
     }
 
-    public Reclamo(String idArea, String fechaRegistro, String tipo, String descripcion, String estado, String canalIngreso, int dniCliente) {
-        this.idArea = idArea;
+    public Reclamo(String idReclamo, String fechaRegistro, String tipo, String descripcion, String estado, String canalIngreso, int dniCliente, String idArea) {
+        this.idReclamo = idReclamo;
         this.fechaRegistro = fechaRegistro;
         this.tipo = tipo;
         this.descripcion = descripcion;
         this.estado = estado;
         this.canalIngreso = canalIngreso;
         this.dniCliente = dniCliente;
-    }
-
-    public String getIdArea() {
-        return idArea;
-    }
-
-    public void setIdArea(String idArea) {
         this.idArea = idArea;
+    }
+
+    public String getIdReclamo() {
+        return idReclamo;
+    }
+
+    public void setIdReclamo(String idReclamo) {
+        this.idReclamo = idReclamo;
     }
 
     public String getFechaRegistro() {
@@ -78,16 +80,25 @@ public class Reclamo {
         this.dniCliente = dniCliente;
     }
 
+    public String getIdArea() {
+        return idArea;
+    }
+
+    public void setIdArea(String idArea) {
+        this.idArea = idArea;
+    }
+
     @Override
     public String toString() {
         return "Reclamo{" +
-                "idArea='" + idArea + '\'' +
+                "idReclamo='" + idReclamo + '\'' +
                 ", fechaRegistro='" + fechaRegistro + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", estado='" + estado + '\'' +
                 ", canalIngreso='" + canalIngreso + '\'' +
                 ", dniCliente=" + dniCliente +
+                ", idArea='" + idArea + '\'' +
                 '}';
     }
 }

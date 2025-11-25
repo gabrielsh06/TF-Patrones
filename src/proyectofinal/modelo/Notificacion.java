@@ -1,6 +1,7 @@
 package proyectofinal.modelo;
 
 public class Notificacion {
+    private String idNotificacion;
     private String fechaEnvio;
     private String medio;
     private String contenido;
@@ -9,11 +10,20 @@ public class Notificacion {
     public Notificacion() {
     }
 
-    public Notificacion(String fechaEnvio, String medio, String contenido, String idReclamo) {
+    public Notificacion(String idNotificacion, String fechaEnvio, String medio, String contenido, String idReclamo) {
+        this.idNotificacion = idNotificacion;
         this.fechaEnvio = fechaEnvio;
         this.medio = medio;
         this.contenido = contenido;
         this.idReclamo = idReclamo;
+    }
+
+    public String getIdNotificacion() {
+        return idNotificacion;
+    }
+
+    public void setIdNotificacion(String idNotificacion) {
+        this.idNotificacion = idNotificacion;
     }
 
     public String getFechaEnvio() {
@@ -51,7 +61,8 @@ public class Notificacion {
     @Override
     public String toString() {
         return "Notificacion{" +
-                "fechaEnvio='" + fechaEnvio + '\'' +
+                "idNotificacion='" + idNotificacion + '\'' +
+                ", fechaEnvio='" + fechaEnvio + '\'' +
                 ", medio='" + medio + '\'' +
                 ", contenido='" + contenido + '\'' +
                 ", idReclamo='" + idReclamo + '\'' +

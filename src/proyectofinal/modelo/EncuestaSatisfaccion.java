@@ -1,6 +1,7 @@
 package proyectofinal.modelo;
 
 public class EncuestaSatisfaccion {
+    private String idEncueste;
     private String fechaEnvio;
     private String puntaje;
     private String comentarios;
@@ -9,11 +10,20 @@ public class EncuestaSatisfaccion {
     public EncuestaSatisfaccion() {
     }
 
-    public EncuestaSatisfaccion(String fechaEnvio, String puntaje, String comentarios, String idCliente) {
+    public EncuestaSatisfaccion(String idEncueste, String fechaEnvio, String puntaje, String comentarios, String idCliente) {
+        this.idEncueste = idEncueste;
         this.fechaEnvio = fechaEnvio;
         this.puntaje = puntaje;
         this.comentarios = comentarios;
         this.idCliente = idCliente;
+    }
+
+    public String getIdEncueste() {
+        return idEncueste;
+    }
+
+    public void setIdEncueste(String idEncueste) {
+        this.idEncueste = idEncueste;
     }
 
     public String getFechaEnvio() {
@@ -51,7 +61,8 @@ public class EncuestaSatisfaccion {
     @Override
     public String toString() {
         return "EncuestaSatisfaccion{" +
-                "fechaEnvio='" + fechaEnvio + '\'' +
+                "idEncueste='" + idEncueste + '\'' +
+                ", fechaEnvio='" + fechaEnvio + '\'' +
                 ", puntaje='" + puntaje + '\'' +
                 ", comentarios='" + comentarios + '\'' +
                 ", idCliente='" + idCliente + '\'' +
