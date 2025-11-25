@@ -1,6 +1,7 @@
 package proyectofinal.modelo;
 
 public class Reclamo {
+    private String idArea;
     private String fechaRegistro;
     private String tipo;
     private String descripcion;
@@ -11,13 +12,22 @@ public class Reclamo {
     public Reclamo() {
     }
 
-    public Reclamo(String fechaRegistro, String tipo, String descripcion, String estado, String canalIngreso, int dniCliente) {
+    public Reclamo(String idArea, String fechaRegistro, String tipo, String descripcion, String estado, String canalIngreso, int dniCliente) {
+        this.idArea = idArea;
         this.fechaRegistro = fechaRegistro;
         this.tipo = tipo;
         this.descripcion = descripcion;
         this.estado = estado;
         this.canalIngreso = canalIngreso;
         this.dniCliente = dniCliente;
+    }
+
+    public String getIdArea() {
+        return idArea;
+    }
+
+    public void setIdArea(String idArea) {
+        this.idArea = idArea;
     }
 
     public String getFechaRegistro() {
@@ -71,7 +81,8 @@ public class Reclamo {
     @Override
     public String toString() {
         return "Reclamo{" +
-                "fechaRegistro='" + fechaRegistro + '\'' +
+                "idArea='" + idArea + '\'' +
+                ", fechaRegistro='" + fechaRegistro + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", estado='" + estado + '\'' +
