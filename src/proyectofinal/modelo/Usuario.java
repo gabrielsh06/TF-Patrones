@@ -1,6 +1,7 @@
 package proyectofinal.modelo;
 
 public class Usuario {
+    private String idUsuario;
     private String nombreUsuario;
     private String contraseña;
     private String rol;
@@ -8,10 +9,19 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombreUsuario, String contraseña, String rol) {
+    public Usuario(String idUsuario, String nombreUsuario, String contraseña, String rol) {
+        this.idUsuario = idUsuario;
         this.nombreUsuario = nombreUsuario;
         this.contraseña = contraseña;
         this.rol = rol;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombreUsuario() {
@@ -41,7 +51,8 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "nombreUsuario='" + nombreUsuario + '\'' +
+                "idUsuario='" + idUsuario + '\'' +
+                ", nombreUsuario='" + nombreUsuario + '\'' +
                 ", contraseña='" + contraseña + '\'' +
                 ", rol='" + rol + '\'' +
                 '}';

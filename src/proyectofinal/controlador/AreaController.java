@@ -1,8 +1,10 @@
 package proyectofinal.controlador;
 
+import proyectofinal.dao.AreaDAO;
 import proyectofinal.modelo.Area;
 
 public class AreaController {
+    private AreaDAO dao;
 
     public AreaController() {
     }
@@ -12,16 +14,16 @@ public class AreaController {
         nuevaArea.setNombreArea(nombre);
         nuevaArea.setTipoArea(tipo);
         nuevaArea.setDescripcion(descripcion);
-        System.out.println("Área creada");
+        dao.agregar(nuevaArea);
     }
 
     public Area buscar(String tipo) {
-
-        return null;
+        return dao.encontrar(tipo);
     }
 
-    public String listarAreas() {
-        return null;
+    public void eliminarArea(String tipo) {
+        Area temp = buscar(tipo);
+        if (temp != null) dao.eliminar(temp);
     }
 
 }

@@ -1,8 +1,10 @@
 package proyectofinal.controlador;
 
+import proyectofinal.dao.ClienteDAO;
 import proyectofinal.modelo.Cliente;
 
 public class ClienteController {
+    private ClienteDAO dao;
 
     public ClienteController() {
     }
@@ -16,14 +18,15 @@ public class ClienteController {
         nuevoCLiente.setEmail(email);
         nuevoCLiente.setNumeroContrato(numeroContrato);
 
-        // BD
+        dao.agregar(nuevoCLiente);
     }
 
-    public Cliente buscarPorDni(String dni) {
-        return null;
+    public Cliente buscarCliente(String dni) {
+        return dao.encontrar(dni);
     }
 
     public void eliminarCliente(String dni) {
-
+        Cliente temp = buscarCliente(dni);
+        if (temp != null) dao.eliminar(temp);
     }
 }
