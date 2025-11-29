@@ -4,16 +4,16 @@ public class Resolucion {
     private String idResolucion;
     private String fechaResolucion;
     private String descripcion;
-    private String idUsuario;
+    private Usuario usuario;
 
     public Resolucion(){
     }
 
-    public Resolucion(String idResolucion, String fechaResolucion, String descripcion, String idUsuario) {
+    public Resolucion(String idResolucion, String fechaResolucion, String descripcion, Usuario usuario) {
         this.idResolucion = idResolucion;
         this.fechaResolucion = fechaResolucion;
         this.descripcion = descripcion;
-        this.idUsuario = idUsuario;
+        this.usuario = usuario;
     }
 
     public String getIdResolucion() {
@@ -40,12 +40,12 @@ public class Resolucion {
         this.descripcion = descripcion;
     }
 
-    public String getIdUsuario() {
-        return idUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class Resolucion {
                 "idResolucion='" + idResolucion + '\'' +
                 ", fechaResolucion='" + fechaResolucion + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", idUsuario='" + idUsuario + '\'' +
+                ", usuario=" + usuario +
                 '}';
     }
 }

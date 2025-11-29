@@ -10,10 +10,8 @@ public class AreaController {
     }
 
     public void crearArea(String nombre, String tipo,String descripcion) {
-        Area nuevaArea = new Area();
-        nuevaArea.setNombreArea(nombre);
-        nuevaArea.setTipoArea(tipo);
-        nuevaArea.setDescripcion(descripcion);
+        Area nuevaArea = new Area(nombre, tipo, descripcion);
+
         dao.agregar(nuevaArea);
     }
 

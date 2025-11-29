@@ -10,11 +10,7 @@ public class UsuarioController {
     }
 
     public void crearUsuario(String idUsuario, String nombre, String contraseña, String rol) {
-        Usuario nuevoUsuario = new Usuario();
-        nuevoUsuario.setIdUsuario(idUsuario);
-        nuevoUsuario.setNombreUsuario(nombre);
-        nuevoUsuario.setContraseña(contraseña);
-        nuevoUsuario.setRol(rol);
+        Usuario nuevoUsuario = new Usuario(idUsuario, nombre, contraseña, rol);
 
         dao.agregar(nuevoUsuario);
     }

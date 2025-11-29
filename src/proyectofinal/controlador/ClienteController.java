@@ -10,13 +10,7 @@ public class ClienteController {
     }
 
     public void crearCliente(String dni, String nombre, String apellidos, String telefono, String email, String numeroContrato) {
-        Cliente nuevoCLiente = new Cliente();
-        nuevoCLiente.setDni(dni);
-        nuevoCLiente.setNombres(nombre);
-        nuevoCLiente.setApellidos(apellidos);
-        nuevoCLiente.setTelefono(telefono);
-        nuevoCLiente.setEmail(email);
-        nuevoCLiente.setNumeroContrato(numeroContrato);
+        Cliente nuevoCLiente = new Cliente(dni, nombre, apellidos, telefono, email, numeroContrato);
 
         dao.agregar(nuevoCLiente);
     }

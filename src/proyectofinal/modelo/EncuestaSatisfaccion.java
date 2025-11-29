@@ -1,29 +1,29 @@
 package proyectofinal.modelo;
 
 public class EncuestaSatisfaccion {
-    private String idEncueste;
+    private String idEncuesta;
     private String fechaEnvio;
     private String puntaje;
     private String comentarios;
-    private String idCliente;
+    private Cliente cliente;
 
     public EncuestaSatisfaccion() {
     }
 
-    public EncuestaSatisfaccion(String idEncueste, String fechaEnvio, String puntaje, String comentarios, String idCliente) {
-        this.idEncueste = idEncueste;
+    public EncuestaSatisfaccion(String idEncuesta, String fechaEnvio, String puntaje, String comentarios, Cliente cliente) {
+        this.idEncuesta = idEncuesta;
         this.fechaEnvio = fechaEnvio;
         this.puntaje = puntaje;
         this.comentarios = comentarios;
-        this.idCliente = idCliente;
+        this.cliente = cliente;
     }
 
-    public String getIdEncueste() {
-        return idEncueste;
+    public String getIdEncuesta() {
+        return idEncuesta;
     }
 
-    public void setIdEncueste(String idEncueste) {
-        this.idEncueste = idEncueste;
+    public void setIdEncuesta(String idEncuesta) {
+        this.idEncuesta = idEncuesta;
     }
 
     public String getFechaEnvio() {
@@ -50,22 +50,22 @@ public class EncuestaSatisfaccion {
         this.comentarios = comentarios;
     }
 
-    public String getIdCliente() {
-        return idCliente;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setIdCliente(String idCliente) {
-        this.idCliente = idCliente;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     @Override
     public String toString() {
         return "EncuestaSatisfaccion{" +
-                "idEncueste='" + idEncueste + '\'' +
+                "idEncuesta='" + idEncuesta + '\'' +
                 ", fechaEnvio='" + fechaEnvio + '\'' +
                 ", puntaje='" + puntaje + '\'' +
                 ", comentarios='" + comentarios + '\'' +
-                ", idCliente='" + idCliente + '\'' +
+                ", cliente=" + cliente +
                 '}';
     }
 }

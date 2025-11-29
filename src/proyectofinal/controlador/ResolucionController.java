@@ -2,6 +2,7 @@ package proyectofinal.controlador;
 
 import proyectofinal.dao.ResolucionDAO;
 import proyectofinal.modelo.Resolucion;
+import proyectofinal.modelo.Usuario;
 
 public class ResolucionController {
     private ResolucionDAO dao;
@@ -9,12 +10,8 @@ public class ResolucionController {
     public ResolucionController() {
     }
 
-    public void crearResolucion(String idResolucion, String fecha, String descripcion, String idUsuario) {
-        Resolucion nuevaResolucion = new Resolucion();
-        nuevaResolucion.setIdResolucion(idResolucion);
-        nuevaResolucion.setFechaResolucion(fecha);
-        nuevaResolucion.setDescripcion(descripcion);
-        nuevaResolucion.setIdUsuario(idUsuario);
+    public void crearResolucion(String idResolucion, String fecha, String descripcion, Usuario usuario) {
+        Resolucion nuevaResolucion = new Resolucion(idResolucion, fecha, descripcion, usuario);
 
         dao.agregar(nuevaResolucion);
     }

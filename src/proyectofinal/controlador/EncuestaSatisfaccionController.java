@@ -1,6 +1,7 @@
 package proyectofinal.controlador;
 
 import proyectofinal.dao.EncuestaDAO;
+import proyectofinal.modelo.Cliente;
 import proyectofinal.modelo.EncuestaSatisfaccion;
 
 public class EncuestaSatisfaccionController {
@@ -9,13 +10,8 @@ public class EncuestaSatisfaccionController {
     public EncuestaSatisfaccionController() {
     }
 
-    public void crearEncuesta(String idEncuesta, String fechaEnvio, String puntaje, String comentarios, String idCliente) {
-        EncuestaSatisfaccion nuevaEncuesta = new EncuestaSatisfaccion();
-        nuevaEncuesta.setIdEncueste(idEncuesta);
-        nuevaEncuesta.setFechaEnvio(fechaEnvio);
-        nuevaEncuesta.setPuntaje(puntaje);
-        nuevaEncuesta.setComentarios(comentarios);
-        nuevaEncuesta.setIdCliente(idCliente);
+    public void crearEncuesta(String idEncuesta, String fechaEnvio, String puntaje, String comentarios, Cliente cliente) {
+        EncuestaSatisfaccion nuevaEncuesta = new EncuestaSatisfaccion(idEncuesta, fechaEnvio, puntaje, comentarios, cliente);
 
         dao.agregar(nuevaEncuesta);
     }

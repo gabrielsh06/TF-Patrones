@@ -5,17 +5,17 @@ public class Notificacion {
     private String fechaEnvio;
     private String medio;
     private String contenido;
-    private String idReclamo;
+    private Reclamo reclamo;
 
     public Notificacion() {
     }
 
-    public Notificacion(String idNotificacion, String fechaEnvio, String medio, String contenido, String idReclamo) {
+    public Notificacion(String idNotificacion, String fechaEnvio, String medio, String contenido, Reclamo reclamo) {
         this.idNotificacion = idNotificacion;
         this.fechaEnvio = fechaEnvio;
         this.medio = medio;
         this.contenido = contenido;
-        this.idReclamo = idReclamo;
+        this.reclamo = reclamo;
     }
 
     public String getIdNotificacion() {
@@ -50,12 +50,12 @@ public class Notificacion {
         this.contenido = contenido;
     }
 
-    public String getIdReclamo() {
-        return idReclamo;
+    public Reclamo getReclamo() {
+        return reclamo;
     }
 
-    public void setIdReclamo(String idReclamo) {
-        this.idReclamo = idReclamo;
+    public void setReclamo(Reclamo reclamo) {
+        this.reclamo = reclamo;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class Notificacion {
                 ", fechaEnvio='" + fechaEnvio + '\'' +
                 ", medio='" + medio + '\'' +
                 ", contenido='" + contenido + '\'' +
-                ", idReclamo='" + idReclamo + '\'' +
+                ", reclamo=" + reclamo +
                 '}';
     }
 }

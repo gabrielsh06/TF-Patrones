@@ -2,6 +2,7 @@ package proyectofinal.controlador;
 
 import proyectofinal.dao.NotificacionDAO;
 import proyectofinal.modelo.Notificacion;
+import proyectofinal.modelo.Reclamo;
 
 public class NotificacionController {
     private NotificacionDAO dao;
@@ -9,13 +10,8 @@ public class NotificacionController {
     public NotificacionController() {
     }
 
-    public void crearNotificacion(String idNotificacion, String fecha, String medio, String contenido, String idReclamo) {
-        Notificacion nuevaNotificacion = new Notificacion();
-        nuevaNotificacion.setIdNotificacion(idNotificacion);
-        nuevaNotificacion.setFechaEnvio(fecha);
-        nuevaNotificacion.setMedio(medio);
-        nuevaNotificacion.setContenido(contenido);
-        nuevaNotificacion.setIdReclamo(idReclamo);
+    public void crearNotificacion(String idNotificacion, String fecha, String medio, String contenido, Reclamo reclamo) {
+        Notificacion nuevaNotificacion = new Notificacion(idNotificacion, fecha, medio, contenido, reclamo);
 
         dao.agregar(nuevaNotificacion);
     }
